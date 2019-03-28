@@ -8,6 +8,6 @@ defmodule Darkmode.Display.View do
   @typedoc "A view"
   typedstruct do
     field :name, String.t(), enforce: true
-    field :elements, List
+    field :elements, list()
   end
 end
