@@ -1,18 +1,7 @@
 defmodule Darkmode do
-  @moduledoc """
-  Documentation for Darkmode.
-  """
+  use Application
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Darkmode.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    Darkmode.Supervisor.start_link
   end
 end
