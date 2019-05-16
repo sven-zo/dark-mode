@@ -22,3 +22,15 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 darkmode-*.tar
 
+# elixir language server
+.elixir_ls
+
+# code editors
+.vscode
+
+# python trash
+lib/display/paper/python/Lib
+lib/display/paper/python/Include
+lib/display/paper/python/Scripts
+lib/display/paper/python/tcl
+lib/display/paper/python/__pycache__

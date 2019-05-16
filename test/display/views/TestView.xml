@@ -1,0 +1,4 @@
+<view name="test">
+  <text>Hello World!</text>
+  <text>123</text>
+</view>
