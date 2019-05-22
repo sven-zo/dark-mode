@@ -11,7 +11,7 @@ action "Build container" {
 
 action "Google Cloud auth" {
   uses = "actions/gcloud/auth@ba93088eb19c4a04638102a838312bb32de0b052"
-  secrets = ["GLOUD_AUTH"]
+  secrets = ["GCLOUD_AUTH"]
 }
 
 action "Configure Docker" {
