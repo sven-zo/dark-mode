@@ -17,7 +17,7 @@ action "Google Cloud auth" {
 action "Configure Docker" {
   uses = "actions/gcloud/cli@ba93088eb19c4a04638102a838312bb32de0b052"
   needs = ["Google Cloud auth"]
-  args = "auth configure-docker"
+  args = "components install docker-credential-gcr && docker-credential-gcr configure-docker"
 }
 
 action "Upload container" {
