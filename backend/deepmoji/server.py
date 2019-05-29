@@ -4,6 +4,11 @@ from emoji_function import *
 app = Flask(__name__)
 
 
+@app.route('/', methods=["GET"])
+def status_api():
+    return make_response('Service is active')
+
+
 @app.route('/', methods=["POST"])
 def emoji_api():
     sentences = request.get_json(force=True)["sentences"]
