@@ -1,0 +1,11 @@
+{
+  "name": "darkmode-core-service",
+  "version": "1.0.0",
+  "description": "The public facing API for dark mode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sven Hoffmann <svenzo@outlook.com>",
+  "license": "Apache-2.0"
+}
