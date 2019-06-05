@@ -1,18 +1,21 @@
-const https = require('https')
+require('dotenv').config()
+const request = require('./request')
+const { HOSTNAME_URL } = process.env
 
-module.exports = () => {
+module.exports = async (_req, res) => {
   let check = false
-  const req = https.request(
-    {
+  try {
+    const d = await request({
       hostname: HOSTNAME_URL,
       path: '/',
-      method: 'GET'
-    },
-    res => {
-      res.on('data', d => {
-        check = d === 'Service is active'
-      })
-    }
-  )
-  res.end('deepmoji', check)
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    check = d === 'Service is active'
+    res.end(`deepmoji==${check}`)
+  } catch (err) {
+    res.end(err)
+  }
 }
