@@ -1,4 +1,4 @@
-workflow "Build deepmoji container on push" {
+workflow "Build & Push containers" {
   on = "push"
   resolves = ["deepmoji: push", "core: push"]
 }
@@ -10,7 +10,7 @@ action "deepmoji: build" {
   args = "build -t eu.gcr.io/dark-mode-agent/deepmoji ./backend/deepmoji"
 }
 
-action "deepmoji: pust" {
+action "deepmoji: push" {
   uses = "./.github/auth-and-push"
   secrets = ["GCLOUD_AUTH"]
   needs = ["deepmoji: build"]
@@ -24,7 +24,7 @@ action "core: build" {
   args = "build -t gcr.io/dark-mode-agent/core ./backend/core"
 }
 
-action "core: pust" {
+action "core: push" {
   uses = "./.github/auth-and-push"
   secrets = ["GCLOUD_AUTH"]
   needs = ["core: build"]
