@@ -34,6 +34,7 @@ lib/display/paper/python/Include
 lib/display/paper/python/Scripts
 lib/display/paper/python/tcl
 lib/display/paper/python/__pycache__
+*.pyc
 
 # node trash
 node_modules
