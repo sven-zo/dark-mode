@@ -37,3 +37,6 @@ lib/display/paper/python/__pycache__
 
 # node trash
 node_modules
+
+# environment files
+*.env

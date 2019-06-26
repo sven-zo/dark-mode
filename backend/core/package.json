@@ -11,7 +11,10 @@
   "author": "Sven Hoffmann <svenzo@outlook.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "@google-cloud/firestore": "^2.2.0",
     "dotenv": "^8.0.0",
+    "emoji-emotion": "^2.1.2",
+    "jsonwebtoken": "^8.5.1",
     "micro": "^9.3.4",
     "microrouter": "^3.1.3"
   },

@@ -1,0 +1,42 @@
+base emotions:
+anger
+sadness
+surprise
+joy
+love
+fear
+
+combined emotions:
+negative (anger / sadness)
+
+imp => anger
+middle_finger => anger
+pouting_cat => anger
+rage => anger
+angry => anger
+anguished => fear
+broken_heart => negative
+hankey => negative
+scream => fear
+scream_cat => fear
+smiling_imp => ---
+sob => sadness
+worried => fear
+thumbsdown => negative
+cold_sweat => fear
+confounded => anger
+confused => sadness
+cry => sadness
+crying_cat_face => sadness
+dissapointed => sadness
+face_with_head_bandage => sadness
+fearful => fear
+flushed => fear
+frowning_face => sadness
+grimacing => ---
+lying_face => ---
+nauseated_face => negative
+open_mouth => surprise
+persevere => ---
+skull => negative
+skull_and_crossbones
