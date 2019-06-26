@@ -11,7 +11,8 @@ export default new Vuex.Store({
     isServerAwake: false,
     isParserAwake: false,
     parserWaitTime: 0,
-    response: {}
+    response: {},
+    ready: true
   },
   mutations: {
     isServerAwake(state, bool) {
@@ -25,6 +26,9 @@ export default new Vuex.Store({
     },
     response(state, object) {
       state.response = object
+    },
+    ready(state, bool) {
+      state.ready = bool
     }
   },
   actions: {
@@ -53,6 +57,7 @@ export default new Vuex.Store({
       }
     },
     async sendSentence({ commit }, message) {
+      commit('ready', false)
       const request = await fetch(API + '/sentence', {
         method: 'POST',
         headers: {
@@ -62,6 +67,7 @@ export default new Vuex.Store({
       })
       const data = await request.json()
       commit('response', data)
+      commit('ready', true)
     }
   }
 })

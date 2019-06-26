@@ -37,4 +37,17 @@ export default {
 #app {
   background-image: url('/img/star-bg.jpg');
 }
+
+body {
+  background-color: #1e4d6b;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
 </style>
