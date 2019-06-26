@@ -3,7 +3,8 @@
     <div class="w-1/2 mx-auto py-10">
       <dark-mode-icon></dark-mode-icon>
     </div>
-    <loader></loader>
+    <loader v-if="!isServerAwake || !isParserAwake"></loader>
+    <prompt v-else></prompt>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import { mapState, mapActions } from 'vuex'
 
 import DarkModeIcon from './components/DarkModeIcon.vue'
 import Loader from './components/Loader.vue'
+import Prompt from './components/Prompt.vue'
 
 export default {
   name: 'app',
@@ -22,7 +24,8 @@ export default {
   },
   components: {
     DarkModeIcon,
-    Loader
+    Loader,
+    Prompt
   }
 }
 </script>
