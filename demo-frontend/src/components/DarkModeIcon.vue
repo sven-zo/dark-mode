@@ -5,6 +5,7 @@
     viewBox="0 0 410 205"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    class="mx-auto"
   >
     <g opacity="0.8">
       <path
