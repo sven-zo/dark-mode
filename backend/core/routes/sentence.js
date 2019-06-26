@@ -17,7 +17,7 @@ const {
 } = require('../utils/emotionTypes')
 
 // Route
-module.exports = async (req, res) => {
+const post = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   try {
     const incoming = await json(req)
@@ -162,3 +162,11 @@ module.exports = async (req, res) => {
     // send(res, 500, err)
   }
 }
+
+const options = async (_req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, POST')
+  send(res, 200)
+}
+
+module.exports = { post, options }

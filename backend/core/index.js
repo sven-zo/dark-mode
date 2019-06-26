@@ -1,5 +1,5 @@
 // Dependencies
-const { router, get, post } = require('microrouter')
+const { router, get, post, options } = require('microrouter')
 // Routes
 const index = require('./routes')
 const status = require('./routes/status')
@@ -11,7 +11,8 @@ const notfound = require('./routes/notfound')
 module.exports = router(
   get('/', index),
   get('/status', status),
-  post('/sentence', sentence),
+  options('/sentence', sentence.options),
+  post('/sentence', sentence.post),
   post('/auth/login', login),
   post('/auth/register', register),
   post('/*', notfound),
