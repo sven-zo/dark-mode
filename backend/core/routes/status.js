@@ -7,6 +7,7 @@ const request = require('../utils/request')
 
 // Route
 module.exports = async (_req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
   let didTimeout = false
   let check = false
   try {
